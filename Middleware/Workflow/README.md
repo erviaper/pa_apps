@@ -66,7 +66,7 @@ Please have your own Zendesk instance setup with Custom Objects, Profiles and Ev
         3. Type the following command ```aws ssm put-parameter --name "/Workflow/dev/connectPrivateKey" --value "YOUR PRIVATE KEY" --type String```
         4. Make sure to replace [YOUR PRIVATE KEY] with your actual private key; ex if your private key is abcde ```aws ssm put-parameter --name "/Workflow/dev/connectPrivateKey" --value "abcde" --type String```
     5. Verify Parameters were saved
-        1. Using the command line ```aws ssm describe-parameters --filters "Key=Name,Value=/Workflow/dev/"```
+        1. Using the command line ```aws ssm describe-parameters --filters "Key=Name,Values=/Workflow/dev/"```
         2. Using the [AWS Console](https://us-west-2.console.aws.amazon.com/systems-manager/parameters?region=us-west-2) 
         3. If you are having problems seeing the Parameters double check that the aws ssm put-parameter calls were done and did not have errors
 5. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
